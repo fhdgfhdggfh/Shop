@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mein Online-Shop</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mein Online Shop</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startseite</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="login.html">Admin Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Willkommen in unserem Online-Shop!</h1>
-        <p>Hier finden Sie alles, was Sie brauchen!</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 Mein Online-Shop</p>
-    </footer>
+  <header>
+    <div class="logo">MeinShop</div>
+    <nav class="nav">
+      <a href="#">Start</a>
+      <a href="#">Produkte</a>
+      <a href="#">Warenkorb</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Willkommen im modernen Online-Shop</h1>
+      <p>Hier findest du hochwertige Produkte zu fairen Preisen.</p>
+    </section>
+
+    <section class="produkte">
+      <div class="produkt">
+        <img src="https://via.placeholder.com/200" alt="Produkt 1" />
+        <h2>Produktname</h2>
+        <p>Beschreibung des Produkts.</p>
+        <button>In den Warenkorb</button>
+      </div>
+
+      <div class="produkt">
+        <img src="https://via.placeholder.com/200" alt="Produkt 2" />
+        <h2>Produktname</h2>
+        <p>Beschreibung des Produkts.</p>
+        <button>In den Warenkorb</button>
+      </div>
+
+      <!-- Du kannst mehr Produktboxen kopieren -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MeinShop – Alle Rechte vorbehalten</p>
+  </footer>
 </body>
 </html>
+
