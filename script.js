@@ -11,3 +11,6 @@ function removeFromCart(product) {
     cart = cart.filter(item => item !== product);
     console.log(cart);
 }
+function addToCart(productName) {
+  alert(productName + " wurde dem Warenkorb hinzugefügt.");
+}
