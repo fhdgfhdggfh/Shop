@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="login.html">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Unsere Produkte</h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="product1.jpg" alt="Produkt 1">
+                <h3>Produkt 1</h3>
+                <p>Beschreibung von Produkt 1.</p>
+                <button>In den Warenkorb</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Produkt 2">
+                <h3>Produkt 2</h3>
+                <p>Beschreibung von Produkt 2.</p>
+                <button>In den Warenkorb</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mein Online-Shop</p>
+    </footer>
+</body>
+</html>
