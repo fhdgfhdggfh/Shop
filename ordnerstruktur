@@ -1,5 +1,8 @@
-/ (Root)
-├── index.html        → Startseite & Produktübersicht
-├── checkout.html     → Checkout-Seite
-├── style.css         → Gemeinsames Design
-├── script.js         → Basisfunktionen (Warenkorb etc.)
+/
+├── index.html         → Startseite mit Produkten
+├── login.html         → Admin-Login
+├── admin.html         → Admin-Dashboard (Produkte verwalten)
+├── checkout.html      → Checkout-Seite
+├── style.css          → Einheitliches Design
+├── app.js             → Login, Shop, Warenkorb, Firebase-Verbindung
+├── firebase-config.js → Deine Firebase-Daten
