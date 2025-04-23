@@ -1,0 +1,5 @@
+/ (Root)
+├── index.html        → Startseite & Produktübersicht
+├── checkout.html     → Checkout-Seite
+├── style.css         → Gemeinsames Design
+├── script.js         → Basisfunktionen (Warenkorb etc.)
