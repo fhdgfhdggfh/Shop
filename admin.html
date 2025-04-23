@@ -16,4 +16,56 @@
 
     <form id="product-form">
       <input type="text" id="title" placeholder="Produktname" required />
-      <input type="text" id="price" placeholder
+      <input type="text" id="price" placeholder="Preis (€)" required />
+      <input type="text" id="image" placeholder="Bild-URL" required />
+      <button type="submit">Produkt hinzufügen</button>
+    </form>
+
+    <h3>Produkte:</h3>
+    <div id="product-list"></div>
+  </div>
+
+  <script>
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // Produkt hinzufügen
+    document.getElementById("product-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const title = document.getElementById("title").value;
+      const price = document.getElementById("price").value;
+      const image = document.getElementById("image").value;
+
+      await db.collection("products").add({ title, price, image });
+      document.getElementById("product-form").reset();
+      loadProducts();
+    });
+
+    // Produkte anzeigen
+    async function loadProducts() {
+      const list = document.getElementById("product-list");
+      list.innerHTML = "";
+      const snapshot = await db.collection("products").get();
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <strong>${data.title}</strong> – €${data.price}<br>
+          <img src="${data.image}" width="100"/><br>
+          <button onclick="deleteProduct('${doc.id}')">Löschen</button>
+          <hr>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    // Produkt löschen
+    async function deleteProduct(id) {
+      await db.collection("products").doc(id).delete();
+      loadProducts();
+    }
+
+    loadProducts();
+  </script>
+</body>
+</html>
